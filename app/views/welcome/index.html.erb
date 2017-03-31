@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>Welcome</h1>
+</div>
+
+<% if user_signed_in? %>
+    <p>Welcome to the application <%= current_user.username %></p>
+    <p>You have logged in <%= current_user.sign_in_count %> time(s).
+       You last signed in: <%= current_user.last_sign_in_at %> from <%= current_user.last_sign_in_ip %>.</p>
+    <p>You are currently logged in from <%= current_user.current_sign_in_ip %>.</p>
+<% else %>
+    <p>Welcome to the application. Please log in</p>
+<% end %>
